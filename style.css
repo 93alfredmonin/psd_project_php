@@ -14,10 +14,17 @@ ul {
 body {
    border-top: 8px solid #f2ac04;
 }
-h1,h2,h3,h4,h5,h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
    text-transform: uppercase;
    font-weight: lighter;
 }
+
 a {
    text-decoration: none;
 }
@@ -61,7 +68,8 @@ header,
    margin: 0 0 18px 0;
 }
 
-#logo {
+#logo,
+#logo-footer {
    position: relative;
    width: 245px;
    display: flex;
@@ -74,7 +82,9 @@ header,
 }
 
 #logo::before,
-#logo::after {
+#logo::after,
+#logo-footer::before,
+#logo-footer::after {
    content: "";
    height: 55px;
    width: 55px;
@@ -85,13 +95,13 @@ header,
 
 }
 
-#logo::before {
+#logo::before, #logo-footer::before {
    background: #f9d275;
    position: absolute;
    left: 0
 }
 
-#logo::after {
+#logo::after, #logo-footer::after {
    background: #f3ab09;
    position: absolute;
    left: 15px;
@@ -142,16 +152,16 @@ header,
 
 #banners .bn-right .wrap {
    margin-left: 15px;
-   
+
 }
 
-#banners .bn-right .img-block{
+#banners .bn-right .img-block {
    position: relative;
    height: 188px;
    overflow: hidden;
 }
 
-#banners .bn-right h3{
+#banners .bn-right h3 {
    position: absolute;
    bottom: 5%;
    left: 5%;
@@ -163,56 +173,60 @@ header,
 
 }
 
-#banners .bn-right p{
+#banners .bn-right p {
    border-top: 1px solid #000;
    margin-top: 5px;
    padding-top: 15px;
 }
 
-#banners i{
+#banners i {
    color: #f3ab09;
    font-size: 26px;
 }
 
-#banners .slide{
+#banners .slide {
    display: flex;
    justify-content: space-around;
    align-items: center;
    margin: 10px 0;
 }
 
-#content{
+#content {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
    margin: 40px 0 0 0;
-   border-top: 1px solid gray ;
+   border-top: 1px solid gray;
    padding: 30px 0 0 0;
 
 }
 
-#content .item{
+#content .item {
    width: 33.33%;
 }
 
-#content .item h2{
+#content .item h2 {
    margin: 0 0 30px 0;
 }
-#content .about, #content .contacts{
+
+#content .about,
+#content .contacts {
    padding: 0 40px;
 }
 
-#content .about{
-border-left: 1px solid grey;
-border-right: 1px solid grey;
+#content .about {
+   border-left: 1px solid grey;
+   border-right: 1px solid grey;
 
 
 }
-.news{
+
+.news {
 
    padding-right: 10px;
 }
-.news .block-news{
+
+.news .block-news {
    display: flex;
    align-items: flex-start;
    border-bottom: 1px dashed grey;
@@ -220,50 +234,94 @@ border-right: 1px solid grey;
    padding-bottom: 10px;
 }
 
-.news .block-news h4{
-   margin: 0 0 5px 0 ;
+.news .block-news h4 {
+   margin: 0 0 5px 0;
 }
 
-.news .date-news span{
+.news .date-news span {
    color: #f2ac04;
    font-weight: bold;
    width: 100%;
    font-size: 22px;
 }
 
-.news .date-news{
+.news .date-news {
    border-right: 1px solid grey;
-   padding-right:10px;
+   padding-right: 10px;
    text-align: center;
    margin-right: 10px;
 }
 
-.about{
+.about {
    line-height: 24px;
 }
 
-.contacts > div{
+.contacts>div {
    border-bottom: 1px dashed grey;
    padding: 10px 0;
    display: flex;
    justify-content: space-around;
 }
 
-.contacts > div:last-child{
+.contacts>div:last-child {
    border: none;
 }
-.contacts i{
+
+.contacts i {
    font-size: 26px;
    width: 15%;
    text-align: center;
    color: lightgrey;
 }
-.contacts span{
+
+.contacts span {
    width: 70%;
    color: grey;
 }
 
-.contacts>div:first-of-type span, .contacts>div:first-of-type+div span{
+.contacts>div:first-of-type span,
+.contacts>div:first-of-type+div span {
    font-weight: bold;
 
+}
+
+footer{
+   display: flex;
+   justify-content: center;
+   border-top: 1px solid grey;
+   padding: 25px 0 15px 0; 
+   margin-top: 25px;
+   flex-direction: column;
+   align-items: center;
+}
+
+#logo-footer{
+   height: 60px;
+   border: none;
+   padding: 0;
+   width: 190px;
+}
+
+footer ul{
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 25px 0 5px 0;
+}
+
+footer ul li a{
+   display: block;
+   text-transform: uppercase;
+   color: grey;
+   padding: 0px 10px;
+   border-right: 1px solid grey;
+   font-size: 12px;
+}
+
+footer ul li:last-child a{
+   border: none;
+}
+
+footer span{
+   color: grey;
+   font-size: 12px;
 }
